@@ -29,7 +29,7 @@ int main(int argc, char **argv) {
 
     Session *session = connection->createSession(Session::AUTO_ACKNOWLEDGE);
     Destination *destination = session->createQueue(dest);
-    MessageProducer *producer = producer = session->createProducer(destination);
+    MessageProducer *producer = session->createProducer(destination);
     producer->setDeliveryMode(DeliveryMode::NON_PERSISTENT);
 
     // Create a messages
